@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:expense/models/expense.dart';
+import 'package:flutter/material.dart';
 
 class ExpenseItem extends StatelessWidget {
   const ExpenseItem(this.expense, {super.key});
@@ -26,9 +26,11 @@ class ExpenseItem extends StatelessWidget {
                 const Spacer(), //takes all extra space
                 Row(
                   children: [
-                    Icon(Icons.alarm),
+                    Icon(categoryIcons[expense.category]),
                     const SizedBox(width: 8),
-                    Text(expense.date.toString()),
+                    Text(
+                      expense.formattedDate,
+                    ), //use of getter so no ()
                   ],
                 ),
               ],
