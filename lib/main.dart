@@ -61,7 +61,7 @@ void main() {
         ),
       ),
       // themeMode: ThemeMode.system, default
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       home: Expenses(),
     ),
   );
