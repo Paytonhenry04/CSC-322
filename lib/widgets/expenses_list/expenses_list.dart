@@ -22,6 +22,14 @@ class ExpensesList extends StatelessWidget {
           //used to identify a widget and its data
           expenses[index],
         ),
+        background: Container(
+          color: Theme.of(context).colorScheme.error,
+          margin: EdgeInsets.symmetric(
+            horizontal: Theme.of(
+              context,
+            ).cardTheme.margin!.horizontal,
+          ),
+        ),
         onDismissed: (direction) {
           onRemoveExpense(expenses[index]);
         },
