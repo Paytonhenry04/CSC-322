@@ -12,6 +12,11 @@ var KDarkColorScheme = ColorScheme.fromSeed(
 //using k for gobal, not needed but commonly used
 
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // //ensures everything is initialized before running app XXX
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,//sets app to only portrait mode XXX b v
+  // ]).then((fn) {
   runApp(
     MaterialApp(
       darkTheme: ThemeData.dark().copyWith(
@@ -61,8 +66,9 @@ void main() {
         ),
       ),
       // themeMode: ThemeMode.system, default
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       home: Expenses(),
     ),
   );
+  // });
 }
