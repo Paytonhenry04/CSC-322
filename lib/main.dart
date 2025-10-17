@@ -16,14 +16,15 @@ void main() {
   runApp(const ProviderScope(child: App()));
 }
 
+//Explicit you can control whole animations, mroe control = more code, easily avoided
+//implicit flutter handles animations for you, less control = less code, easier to use/built in
+//^ used in meal_details
+
 class App extends StatelessWidget {
   const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: theme,
-      home: const TabsScreen(),
-    );
+    return MaterialApp(theme: theme, home: const TabsScreen());
   }
 }
